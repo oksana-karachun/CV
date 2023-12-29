@@ -1,0 +1,177 @@
+.wrapper {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    background-color: var(--primary-500);
+    padding: 15px;
+}
+
+.photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.name {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.position {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--primary-200);
+}
+
+.expertise {
+    .tool {
+        display: inline-block;
+        padding: 2px 15px;
+        border-radius: 20px;
+        background-color: var( --secondary-300);
+        margin: 5px 5px 5px 0;
+
+        &-name {
+            font-weight: 400;
+            font-size: 1rem;
+        }
+    }
+}
+
+.experience {
+    .card {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 30px 2px var(--primary-opasity-100);
+        border-radius: 10px;
+        width: 100%;
+        height: 100px;
+        margin: 10px 0;
+
+        &:hover {
+            border: 1px solid var(--primary-500);
+        }
+    }
+
+    .line {
+        width: 5px;
+        height: 80%;
+        background-color: var(--primary-500);
+        margin: 0 10px;
+    }
+
+    .company {
+        &-date {
+            font-weight: 400;
+            font-size: 0.8rem;
+
+        }
+        &-name {
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        &-position {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+    }
+
+}
+
+.education {
+    .university {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .info {
+        margin-left: 10px;
+    }
+
+    .text {
+        font-weight: 200;
+        font-size: 0.9rem;
+    }
+
+    .paragraph {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 10px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--primary-500);
+
+        &-line {
+            width: 1px;
+            height: 100%;
+            background-color: var(--primary-500);
+        }
+    }
+}
+
+.languages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .text {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    @function drawLine($percentage) {
+        $color: var(--primary-600);
+        @return linear-gradient(90deg, $color #{$percentage}, transparent #{$percentage});
+    }
+
+    .line {
+        width: 50%;
+        height: 10px;
+        border-radius: 10px;
+        background: var(--primary-500);
+        position: relative;
+
+    }
+    @mixin createLevel($percentage) {
+        position: absolute;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background: drawLine($percentage + '%');
+    }
+
+    .level {
+        @for $percentage from 1 through 100 {
+            &-#{$percentage} {
+                @include createLevel($percentage);
+            }
+        }
+    }
+}
+
+.responsibilities {
+    padding: 15px 10px;
+
+    >li {
+        padding: 5px 0;
+    }
+}

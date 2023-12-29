@@ -1,0 +1,13 @@
+.button {
+    position: fixed;
+    z-index: 3;
+    right: 20px;
+    bottom: 15px;
+
+    border: none;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--primary-opasity-100);
+}

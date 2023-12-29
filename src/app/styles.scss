@@ -1,0 +1,12 @@
+@import './styles/index';
+
+.wrapper {
+  height: 100vh;
+  margin: 30px 20px;
+  font-size: 18px;
+}
+
+.result {
+  background: var(--gradient-purple);
+  color: var(--typography-200);
+}

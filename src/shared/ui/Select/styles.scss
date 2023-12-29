@@ -1,0 +1,28 @@
+.wrapper {
+  width: 220px;
+  position: relative;
+
+  .icon{
+    position: absolute;
+    right: 18px;
+    top: 16px;
+  }
+}
+
+.select {
+  width: 100%;
+  height: 39px;
+  padding: 0 18px;
+
+  border: 1px solid var(--secondary-500);
+  border-radius: 20px;
+
+  background-color: transparent;
+  color: var(--typography-900);
+
+  appearance: none;
+  cursor: pointer;
+
+  font-size: 14px;
+  line-height: 140%;
+}
